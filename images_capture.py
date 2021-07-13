@@ -28,7 +28,7 @@ count = image_name = 0
 try: 
     os.mkdir(images_folder)
 except FileExistsError:
-        pass
+    pass
 try:
     os.mkdir(label_name)
 except FileExistsError:

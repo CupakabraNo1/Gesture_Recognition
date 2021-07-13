@@ -6,12 +6,12 @@ Created on Fri Jul  9 14:34:59 2021
 @author: cupakabrano1
 """
 import tensorflow as tf
-from tensorflow.keras.applications.resnet50 import ResNet50
+from tensorflow.keras.applications.resnet50 import ResNet50, MobileNet
 from data_preprocessing import target_val, img_data
 
 import numpy as np
 
-model = ResNet50(weights='imagenet')
+model = MobileNet(weights='imagenet')
 
 model.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
