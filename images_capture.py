@@ -8,20 +8,24 @@ Created on Fri Jul  9 09:52:26 2021
 
 import os
 import sys
-import cv2 
+import cv2
 
 try:
     images_count = int(sys.argv[1])
     images_label = sys.argv[2]
+    try: 
+        images_folder = sys.argv[3]
+    except Exception:
+        images_folder = 'training_images'
+        print("\nImages folder is not specified, default folder named 'training_images' is created\n")
 except Exception:
-    print("\nBad syntax. Running this file needs two input parameters. Example:\n")
-    print("python images_capture.py 100 mute")
+    print("\nBad syntax. Running this file needs two input parameters. Example:")
+    print("python images_capture.py 100 mute\n")
     sys.exit()
     
 font = cv2.FONT_HERSHEY_PLAIN
 start = False
 
-images_folder = 'training_images'
 label_name = os.path.join(images_folder, images_label)
 count = image_name = 0
 
@@ -57,7 +61,7 @@ while True:
         image_name += 1
         count += 1
     
-    cv2.putText(image, "Fit the gesture inside the white box and Press 's' key to start clicking pictures",
+    cv2.putText(image, "Fit the gesture inside the white box and Press Space [' '] key to start clicking pictures",
             (20, 30), font, 0.8, (255, 0, 0), 1, cv2.LINE_AA)
     cv2.putText(image, "Press 'q' to exit.",
             (20, 60), font, 0.8, (255, 0, 0), 1, cv2.LINE_AA)
@@ -68,7 +72,7 @@ while True:
     k = cv2.waitKey(10)
     if k==ord('q'):
             break
-    if k == ord('s'):
+    if k == ord(' '):
         start = not start
     
 video.release()
