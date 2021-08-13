@@ -120,6 +120,9 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
+# InteliJ
+.idea/*
+
 # mkdocs documentation
 /site
 
@@ -137,4 +140,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-training_images
+tensorflow/models/*
+tensorflow/protoc/*
