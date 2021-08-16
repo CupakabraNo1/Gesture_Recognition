@@ -1,10 +1,10 @@
 import os
 
 # images to collect
-picture_labels = ["srbija", "like"]
+picture_labels = ["serbia","palm","like"]
 
 # number of images per each category
-number_of_images = 10
+number_of_images = 30
 
 # names
 CUSTOM_MODEL_NAME = 'my_ssd_mobnet'
@@ -42,8 +42,8 @@ labels = [
     {'name': '', 'id': 0}
 ]
 
-# for path in paths.values():
-#     if not os.path.exists(path):
-#         os.makedirs(path)
+for path in paths.values():
+    if not os.path.exists(path):
+        os.makedirs(path)
 
 
