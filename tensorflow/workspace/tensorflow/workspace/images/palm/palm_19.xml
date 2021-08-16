@@ -1,0 +1,26 @@
+<annotation>
+	<folder>palm</folder>
+	<filename>palm_19.jpg</filename>
+	<path>D:\FAKS\NeuralNetworks\Gesture_Recognition\tensorflow\workspace\tensorflow\workspace\images\palm\palm_19.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>palm</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>867</xmin>
+			<ymin>161</ymin>
+			<xmax>1090</xmax>
+			<ymax>522</ymax>
+		</bndbox>
+	</object>
+</annotation>
