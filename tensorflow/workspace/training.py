@@ -15,7 +15,6 @@ with open(files['LABELMAP'], 'w') as f:
         f.write('\tid:{}\n'.format(label['id']))
         f.write('}\n')
 
-
 train = "{} -x {} -l {} -o {}" .format(
     files['TF_RECORD_SCRIPT'],
     os.path.join(paths['IMAGE_PATH'], 'train'),
@@ -60,11 +59,25 @@ with tf.io.gfile.GFile(files['PIPELINE_CONFIG'], "wb") as f:
 
 # training the model
 TRAINING_SCRIPT = os.path.join(paths['APIMODEL_PATH'], 'research', 'object_detection', 'model_main_tf2.py')
-command = "python {} --model_dir={} --pipeline_config_path={} --num_train_steps=2000".format(TRAINING_SCRIPT, paths['CHECKPOINT_PATH'],files['PIPELINE_CONFIG'])
+command = "python {} \
+    --model_dir={} \
+    --pipeline_config_path={} \
+    --num_train_steps=2000".format(
+    TRAINING_SCRIPT,
+    paths['CHECKPOINT_PATH'],
+    files['PIPELINE_CONFIG'])
 print(command)
 os.system(command)
 
 # evaluate the model
-evaluate = "python {} --model_dir={} --pipeline_config_path={} --checkpoint_dir={}".format(TRAINING_SCRIPT, paths['CHECKPOINT_PATH'], files['PIPELINE_CONFIG'], paths['CHECKPOINT_PATH'])
+evaluate = "python {} \
+    --model_dir={} \
+    --pipeline_config_path={} \
+    --checkpoint_dir={}".format(
+    TRAINING_SCRIPT,
+    paths['CHECKPOINT_PATH'],
+    files['PIPELINE_CONFIG'],
+    paths['CHECKPOINT_PATH'])
 print(evaluate)
 os.system(evaluate)
+os.system('exit()')

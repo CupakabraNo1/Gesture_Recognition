@@ -41,7 +41,7 @@ while cap.isOpened():
         detections['detection_scores'],
         category_index,
         use_normalized_coordinates=True,
-        max_boxes_to_draw=5,
+        max_boxes_to_draw=2,
         min_score_thresh=.8,
         agnostic_mode=False
     )

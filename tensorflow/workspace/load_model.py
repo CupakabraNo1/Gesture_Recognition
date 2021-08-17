@@ -13,6 +13,7 @@ detection_model = model_builder.build(model_config=configs['model'], is_training
 ckpt = tf.compat.v2.train.Checkpoint(model=detection_model)
 ckpt.restore(os.path.join(paths['CHECKPOINT_PATH'], 'ckpt-3')).expect_partial()
 
+
 @tf.function
 def detect_fn(image):
     image, shapes = detection_model.preprocess(image)

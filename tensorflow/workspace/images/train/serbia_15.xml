@@ -1,0 +1,26 @@
+<annotation>
+	<folder>serbia</folder>
+	<filename>serbia_15.jpg</filename>
+	<path>D:\ObjectDetection\tensorflow\workspace\images\serbia\serbia_15.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1280</width>
+		<height>720</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Serbia</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>117</xmin>
+			<ymin>154</ymin>
+			<xmax>387</xmax>
+			<ymax>462</ymax>
+		</bndbox>
+	</object>
+</annotation>

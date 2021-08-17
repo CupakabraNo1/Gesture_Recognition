@@ -1,13 +1,13 @@
 import os
 
 # images to collect
-picture_labels = ["serbia","palm","like"]
+picture_labels = ["serbia","stop","like"]
 
 # number of images per each category
-number_of_images = 30
+number_of_images = 20
 
 # names
-CUSTOM_MODEL_NAME = 'my_ssd_mobnet'
+CUSTOM_MODEL_NAME = 'my_ssd_mobnet_v2_fpnlite'
 # CUSTOM_MODEL_NAME = 'my_centernet'
 PRETRAINED_MODEL_NAME = 'ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8'
 # PRETRAINED_MODEL_NAME = 'centernet_mobilenetv2_fpn_od'
@@ -39,7 +39,9 @@ files = {
 
 # labels
 labels = [
-    {'name': '', 'id': 0}
+    {'name': 'Like', 'id': 1},
+    {'name': 'Stop', 'id': 2},
+    {'name': 'Serbia', 'id': 3}
 ]
 
 for path in paths.values():
