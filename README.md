@@ -51,7 +51,8 @@ _Sledeći korak je kloniranje
 [Protobuf repozitorijuma](https://github.com/protocolbuffers/protobuf/releases)
 i kopiranje njegovog sadrzaja unutar /tensorflow/protoc direktorijuma_
 
-    $ ./tensorflow/protoc/bin/protoc.exe ./tensorflow/models/research/object_detection/protos/*.proto --python_out=.
+    # From within TensorFlow/models/research/
+    $ .\..\..\protoc\bin\protoc.exe .\object_detection\protos\*.proto --python_out=.
 
 _Zatim treba da instaliramo "COCO API", u slučaju da nije pravilno
 povučen kao dependency kroz instalaciju prethodnih biblioteka, i
@@ -63,7 +64,7 @@ to pokretanjem sledećih komandi:_
 _Konačno, treba da osposobimo "Object Detection API":_
 
     $ cp ./tensorflow/models/research/object_detection/packages/tf2/setup.py ./tensorflow/models/research/
-    $ python -m pip install --use-feature=2020-resolver .
+    $ python -m pip install --use-feature=2020-resolver .\tensorflow\models\research
 
 _Na kraju, možemo proveriti validnost instalacije pokretanjem sledeće komande koja bi trebala
 u poslednjoj liniji da istampa OK na konzolu:_
