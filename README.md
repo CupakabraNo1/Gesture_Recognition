@@ -19,7 +19,7 @@ Palm, Serbia
 stream-u ucitanog sa kamere Raspberry Pi uređaja
 
 
-##Uputstvo za korišćenje
+## Uputstvo za korišćenje
 U zavisnosti od sitema na kome se pokreću skripte, neophodno 
 je pokrenuti jednu od dve skripte za instaliranje "requirements"
 
@@ -33,7 +33,7 @@ Za Windows:
     .\windows_setup_venv.bat
     .\windows_requirements.bat
 
-###Korak po korak kroz projekat
+### Korak po korak kroz projekat
 
 _Prvo treba izgenerisati dataset za treniranje modela 
 pokretanjem "image_collection.py" skripte_
@@ -70,7 +70,7 @@ u poslednjoj liniji da istampa OK na konzolu:_
 
     $ python ./tensorflow/models/research/object_detection/builders/model_builder_tf2_test.py
 
-###_Treniranje_
+### _Treniranje_
 
 _Da bi se počelo sa treniranjem potrebno je sa 
 [repozitorijuma TensorFlow 2 Detection Model Zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/tf2_detection_zoo.md) 
