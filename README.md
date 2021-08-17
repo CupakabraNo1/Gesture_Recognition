@@ -1,6 +1,6 @@
-#O projektu
+# O projektu
 
-##Cilj projekta
+## Cilj projekta
 Cilj projekta predstavlja obezbeđivanje frameworka za lako 
 pravljenje object detection modela optimizovanog za korišćenje
 na velikom broju slabih uređaja i exportovanom u tflite 
