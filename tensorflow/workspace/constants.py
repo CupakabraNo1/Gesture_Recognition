@@ -1,7 +1,7 @@
 import os
 
 # images to collect
-picture_labels = ["serbia","stop","like"]
+picture_labels = ["serbia","like","palm"]
 
 # number of images per each category
 number_of_images = 20
@@ -39,9 +39,9 @@ files = {
 
 # labels
 labels = [
-    {'name': 'Like', 'id': 1},
-    {'name': 'Stop', 'id': 2},
-    {'name': 'Serbia', 'id': 3}
+    {'name': 'palm', 'id': 1},
+    {'name': 'like', 'id': 2},
+    {'name': 'serbia', 'id': 3}
 ]
 
 for path in paths.values():

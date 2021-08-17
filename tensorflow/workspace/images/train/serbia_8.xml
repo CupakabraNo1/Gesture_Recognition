@@ -1,7 +1,7 @@
 <annotation>
 	<folder>serbia</folder>
 	<filename>serbia_8.jpg</filename>
-	<path>D:\ObjectDetection\tensorflow\workspace\images\serbia\serbia_8.jpg</path>
+	<path>D:\FAKS\NeuralNetworks\Gesture_Recognition\tensorflow\workspace\tensorflow\workspace\images\serbia\serbia_8.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -12,15 +12,15 @@
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>Serbia</name>
+		<name>serbia</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>434</xmin>
-			<ymin>136</ymin>
-			<xmax>718</xmax>
-			<ymax>520</ymax>
+			<xmin>913</xmin>
+			<ymin>146</ymin>
+			<xmax>1179</xmax>
+			<ymax>445</ymax>
 		</bndbox>
 	</object>
 </annotation>

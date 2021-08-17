@@ -1,7 +1,7 @@
 <annotation>
 	<folder>like</folder>
 	<filename>like_12.jpg</filename>
-	<path>D:\ObjectDetection\tensorflow\workspace\images\like\like_12.jpg</path>
+	<path>D:\FAKS\NeuralNetworks\Gesture_Recognition\tensorflow\workspace\tensorflow\workspace\images\like\like_12.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -12,15 +12,15 @@
 	</size>
 	<segmented>0</segmented>
 	<object>
-		<name>Like</name>
+		<name>like</name>
 		<pose>Unspecified</pose>
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>417</xmin>
-			<ymin>217</ymin>
-			<xmax>605</xmax>
-			<ymax>481</ymax>
+			<xmin>818</xmin>
+			<ymin>240</ymin>
+			<xmax>1019</xmax>
+			<ymax>554</ymax>
 		</bndbox>
 	</object>
 </annotation>
