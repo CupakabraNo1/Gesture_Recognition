@@ -25,7 +25,7 @@ je pokrenuti jednu od dve skripte za instaliranje "requirements"
 
 Za Linux:
 
-    sh ./...
+    sh ./linux_setup_venv.sh
     sh ./linux_requirements.sh
 
 Za Windows:
