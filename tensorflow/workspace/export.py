@@ -29,11 +29,18 @@ TFLITE_MODEL = os.path.join(paths['TFLITE_PATH'], 'saved_model', 'detect.tflite'
 tflite = "tflite_convert \
 --saved_model_dir={} \
 --output_file={} \
---input_shapes=1,320,320,3 \
+--input_shapes=1,300,300,3 \
+--inference_type=QUANTIZED_UINT8 \
 --input_arrays=normalized_input_image_tensor \
 --output_arrays='TFLite_Detection_PostProcess','TFLite_Detection_PostProcess:1','TFLite_Detection_PostProcess:2','TFLite_Detection_PostProcess:3' \
---inference_type=FLOAT \
---allow_custom_ops".format(FROZEN_TFLITE_PATH, TFLITE_MODEL)
+--mean_values=128 \
+--std_dev_values=128 \
+--change_concat_input_ranges=false \
+--allow_custom_ops \
+".format(
+    FROZEN_TFLITE_PATH,
+    TFLITE_MODEL
+)
 print(tflite)
 os.system(tflite)
 
