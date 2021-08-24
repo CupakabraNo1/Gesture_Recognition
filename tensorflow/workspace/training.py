@@ -53,6 +53,11 @@ pipeline_config.train_input_reader.tf_record_input_reader.input_path[:] = [os.pa
 pipeline_config.eval_input_reader[0].label_map_path = files['LABELMAP']
 pipeline_config.eval_input_reader[0].tf_record_input_reader.input_path[:] = [os.path.join(paths['ANNOTATION_PATH'], 'test.record')]
 
+pipeline_config.train_config.optimizer.momentum_optimizer.learning_rate.cosine_decay_learning_rate.learning_rate_base = 0.08
+pipeline_config.train_config.optimizer.momentum_optimizer.learning_rate.cosine_decay_learning_rate.total_steps = 2000
+pipeline_config.train_config.optimizer.momentum_optimizer.learning_rate.cosine_decay_learning_rate.warmup_learning_rate = 0.02
+pipeline_config.train_config.optimizer.momentum_optimizer.learning_rate.cosine_decay_learning_rate.warmup_steps = 200
+
 config_text = text_format.MessageToString(pipeline_config)
 with tf.io.gfile.GFile(files['PIPELINE_CONFIG'], "wb") as f:
     f.write(config_text)
@@ -80,4 +85,4 @@ evaluate = "python {} \
     paths['CHECKPOINT_PATH'])
 print(evaluate)
 os.system(evaluate)
-os.system('exit()')
+exit()
