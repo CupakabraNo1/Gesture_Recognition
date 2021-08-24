@@ -1,4 +1,12 @@
 item { 
-	name:'ball'
+	name:'palm'
 	id:1
+}
+item { 
+	name:'like'
+	id:2
+}
+item { 
+	name:'serbia'
+	id:3
 }

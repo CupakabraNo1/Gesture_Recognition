@@ -9,7 +9,7 @@ from load_model import detect_fn
 
 category_index = label_map_util.create_category_index_from_labelmap(files['LABELMAP'])
 
-IMAGE_PATH = os.path.join(paths['IMAGE_PATH'], 'test', 'stop_5.jpg')
+IMAGE_PATH = os.path.join(paths['IMAGE_PATH'], 'test', 'palm_29.jpg')
 print(IMAGE_PATH)
 img = cv2.imread(IMAGE_PATH)
 
